@@ -1,37 +1,66 @@
-<style>
-  * {
-    box-sizing: border-box;
-  }
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lê Thịnh</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url("https://raw.githubusercontent.com/Thinhpronek/lethinh.github.io/main/furina.jpg") no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url("https://raw.githubusercontent.com/Thinhpronek/lethinh.github.io/main/furina.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
 
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 👈 tối nhẹ thôi */
-    backdrop-filter: blur(4px);     /* 👈 mờ nền để card nổi */
-    z-index: 0;
-  }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      z-index: 0;
+    }
 
-  .card {
-    position: relative;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(6px);
-    padding: 50px 70px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(255,2
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(6px);
+      padding: 50px 70px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255,255,255,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(255,255,255,0.3);
+    }
+
+    .card h1 {
+      margin-bottom: 12px;
+      font-size: 2.5rem;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .emo
