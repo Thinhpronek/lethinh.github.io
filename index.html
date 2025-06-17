@@ -5,39 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lê Thịnh</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url("https://github.com/Thinhpronek/lethinh.github.io/blob/main/furina.jpg?raw=true") no-repeat center center fixed;
+      background: url("https://raw.githubusercontent.com/Thinhpronek/lethinh.github.io/main/furina.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
+    /* 👇 Lớp phủ mờ ảo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Mờ nhẹ, không đen đặc */
+      backdrop-filter: blur(4px); /* 👈 Hiệu ứng làm mờ nền */
+      z-index: 0;
+    }
+
     .card {
-      background: #1a1a1a;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.05); /* Trong suốt nhẹ */
+      backdrop-filter: blur(6px); /* Làm mờ phía sau card */
       padding: 50px 70px;
       border-radius: 20px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(255,255,255,0.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.08);
       transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
     }
+
     .card:hover {
       transform: scale(1.05);
-      background: #292929;
-      box-shadow: 0 0 30px rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(255,255,255,0.3);
     }
+
     .card h1 {
       margin-bottom: 12px;
       font-size: 2.5rem;
+      color: white;
     }
+
     .card p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #ddd;
     }
+
     .emoji {
       font-size: 1.4rem;
       margin-left: 6px;
