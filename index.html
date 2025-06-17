@@ -27,7 +27,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(5px);
       z-index: 0;
     }
@@ -35,22 +35,21 @@
     .card {
       position: relative;
       z-index: 1;
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.75);
       padding: 50px 70px;
       border-radius: 20px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(255,255,255,0.08);
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
       transition: all 0.3s ease;
       cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.1);
       color: white;
     }
 
     .card:hover {
       transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 30px rgba(255,255,255,0.3);
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 30px rgba(255,255,255,0.25);
     }
 
     .card h1 {
@@ -63,4 +62,17 @@
       color: #ddd;
     }
 
-    .emo
+    .emoji {
+      font-size: 1.4rem;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Lê Thịnh</h1>
+    <p>Theo dõi mình ở đây <span class="emoji">👉🔥✨</span></p>
+    <!-- Bạn có thể thêm link Facebook tại đây -->
+  </div>
+</body>
+</html>
